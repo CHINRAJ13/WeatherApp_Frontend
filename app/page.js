@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Layout from '../components/Layout';
+import Image from 'next/image';
 
 export default function Home() {
   const [weather, setWeather] = useState(null);
@@ -107,7 +108,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-blue-400 to-blue-600 backdrop-blur-md rounded-lg p-7 text-white grid md:grid-cols-[auto_1fr] gap-6 items-center shadow-md">
             {/* Left: Weather Icon */}
             <div className="flex justify-center md:justify-start">
-              <img
+              <Image
                 src={
                   weather?.weather[0]?.icon
                     ? `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
