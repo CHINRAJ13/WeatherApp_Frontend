@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(async (position) => {
       const { latitude, longitude } = position.coords;
-      const res = await fetch(`http://localhost:5000/api/weather/current?lat=${latitude}&lon=${longitude}`);
+      const res = await fetch(`https://weatherapp-bwfv.onrender.com/api/weather/current?lat=${latitude}&lon=${longitude}`);
       const data = await res.json();
       setWeather(data.data);
     });
