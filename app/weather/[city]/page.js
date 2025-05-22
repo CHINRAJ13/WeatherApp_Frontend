@@ -3,6 +3,7 @@
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Layout from '../../../components/Layout';
+import Image from 'next/image';
 
 export default function Page() {
   const params = useParams();
@@ -37,7 +38,7 @@ export default function Page() {
       <div className="bg-gradient-to-r from-blue-400 to-blue-600 backdrop-blur-md rounded-lg mt-5 p-7 text-white grid md:grid-cols-[auto_1fr] gap-6 items-center">
         {/* Left: Weather Icon */}
         <div className="flex justify-center md:justify-start">
-          <img
+          <Image
             src={
               weather?.weather[0]?.icon
                 ? `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
