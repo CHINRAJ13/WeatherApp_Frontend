@@ -14,7 +14,7 @@ export default function Page() {
 
   useEffect(() => {
     if (city) {
-      fetch(`http://localhost:5000/api/weather/city/${city}`)
+      fetch(`https://weatherapp-bwfv.onrender.com/api/weather/city/${city}`)
         .then(res => res.json())
         .then(data => {
           if (data.cod === '404') {
