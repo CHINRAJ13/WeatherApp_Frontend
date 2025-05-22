@@ -1,11 +1,10 @@
 'use client'
 
-import { useRouter, useParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Layout from '../../../components/Layout';
 
 export default function Page() {
-  const router = useRouter();
   const params = useParams();
   const city = params.city;
 
